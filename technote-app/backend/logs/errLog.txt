@@ -1,0 +1,2 @@
+2023-06-02		13:23:05	2d20ab2e-1cdf-4cee-8b5e-9335ea5b1556	 ReferenceError: bcrypt is not defined 
+2023-06-02		13:32:47	fe5eb6b9-cef7-4a9f-a2be-f8e570754621	 SyntaxError: Expected double-quoted property name in JSON at position 160 

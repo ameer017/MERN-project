@@ -5,7 +5,7 @@ const fsPromises = require("fs/promises");
 const { format } = require("date-fns");
 const { v4: uuid } = require("uuid");
 
-const logEvent = async (message, logName) => {
+const logEvents = async (message, logName) => {
   const dateTime = format(new Date(), "yyyy-MM-dd\t\tHH:mm:ss");
   const logItems = `${dateTime}\t${uuid()}\t ${message} \n`;
   console.log(logItems);
@@ -23,9 +23,9 @@ const logEvent = async (message, logName) => {
 };
 
 const logger = (req, res, next) => {
-  logEvent(`${req.method}\t${req.headers.origin}\t${req.url}`, "reqLog.txt");
+  logEvents(`${req.method}\t${req.headers.origin}\t${req.url}`, "reqLog.txt");
   console.log(`${req.method}\n${req.path}`);
   next();
 };
 
-module.exports = { logger, logEvent };
+module.exports = { logger, logEvents };

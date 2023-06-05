@@ -6,16 +6,16 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const { logger, logEvent } = require("./middleware/logger");
+const { logger } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 const corsOptions = require("./config/corsOptions");
-const connectDB = require("./config/dbConnect");
+const connectDB = require("./config/dbConn");
 
+console.log(process.env.NODE_ENV);
 
 connectDB();
 
 const PORT = process.env.PORT || 4500;
-// console.log(process.env.NODE_ENV);
 
 app.use(logger);
 
@@ -30,6 +30,7 @@ app.use(cors(corsOptions));
 app.use(express.static("public"));
 
 app.use("/", require("./routes/root"));
+app.use("/user", require("./routes/userRoute"));
 
 // error page routes/ catch all routes
 app.all("*", (req, res) => {
@@ -50,7 +51,10 @@ mongoose.connection.once("open", () => {
   app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 });
 
-mongoose.connection.on('error', err => {
-  console.log(err)
-  logEvent(`${err.no}: ${err.code}\t${err.syscall}\t${err.hotsname}`, 'mongoErrLog.log')
-})
+mongoose.connection.on("error", (err) => {
+  console.log(err);
+  logEvents(
+    `${err.no}: ${err.code}\t${err.syscall}\t${err.hostname}`,
+    "mongoErrLog.log"
+  );
+});

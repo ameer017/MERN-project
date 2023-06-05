@@ -13,7 +13,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: "No users found" });
   }
 
-  res.json(users);
+  res.status(200).json(users);
 });
 
 const createNewUser = asyncHandler(async (req, res) => {
@@ -84,26 +84,27 @@ const updateUser = asyncHandler(async (req, res) => {
 });
 
 
-// to delete user, we need delete request and then the route will be /user and the access is going to be private
 const deleteUser = asyncHandler(async (req, res) => {
-  const { id } = req.body;
+  const {id} = req.body
+  if(id){
+    return res.status(400).json({message: 'user id required'})
+  }
 
-  //confirm
-  if (!id) res.status(400).json({ message: "User's ID is required" });
+  const notes = await Note.findOne({user: id}).lean().exec()
 
-  // Does the user still have assigned notes?
-  const note = await Note.findOne({ user: id }).lean().exec();
-  if (note) res.status(400).json({ message: "User has notes assigned" });
+  if(notes.length) {
+    return res.status(400).json({message: 'user assigned note'})
+  }
 
-  // Does the user exist to delete?
-  const user = await User.findById(id).exec();
+  const user = await User.findById(id).exec()
+  if(user) {
+    return res.status(400).json({message: 'user not found'})
+  }
 
-  if (!user) return res.status(400).json({ message: "User Not Found" });
+  const result = await user.deleteOne()
+  const response = `username ${result.username} with id: ${result._id} deleted`
 
-  const deletedUser = await user.deleteOne();
-
-  const reply = `User ${deletedUser.username} with ID ${deletedUser._id} has been deleted`;
-  res.status(200).json(reply);
+  res.json(response)
 });
 
 module.exports = {

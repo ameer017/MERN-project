@@ -31,3 +31,12 @@
 2023-06-05		09:32:14	75873977-bc0f-4ce9-bade-35a92aa4f3c0	 PATCH	undefined	/user?Content-Type=application/json 
 2023-06-05		09:32:29	2962623a-e1f9-4d57-a79a-a8bc6fd10a76	 GET	undefined	/user 
 2023-06-05		09:33:31	f3846c3e-b32c-49fd-a875-431948ff53e0	 PATCH	undefined	/user?Content-Type=application/json 
+2023-06-05		10:16:14	4b542da5-8e5f-4080-b264-ca14cd731af7	 POST	undefined	/note 
+2023-06-05		10:19:41	d3573c8c-cb7b-4299-bd79-d4ff8f86154b	 GET	undefined	/note 
+2023-06-05		10:19:57	1f4f62a5-8abc-4ced-aa27-1600abdcc958	 POST	undefined	/note 
+2023-06-05		10:27:15	0375221c-bddf-4245-8c50-56ce6ec5e50b	 GET	undefined	/note 
+2023-06-05		10:39:00	6d63c55b-a23f-4b6e-a282-252f7c70005b	 POST	undefined	/note 
+2023-06-05		10:51:31	723a0979-0dec-4400-af04-51d7eae3f31c	 GET	undefined	/user 
+2023-06-05		10:52:59	3fc77840-c1b6-466d-841d-77545581c497	 POST	undefined	/note 
+2023-06-05		10:56:14	e18d2e96-9b40-4154-9f0a-e733160aa8d3	 GET	undefined	/note 
+2023-06-05		10:57:53	237565bc-714d-48dc-a279-782cc860c9e9	 POST	undefined	/note 

@@ -2,3 +2,4 @@
 2023-06-02		13:32:47	fe5eb6b9-cef7-4a9f-a2be-f8e570754621	 SyntaxError: Expected double-quoted property name in JSON at position 160 
 2023-06-05		10:16:14	490058d8-26d0-4688-9abb-07a6310788db	 ValidationError: Notes validation failed: user: Cast to ObjectId failed for value "Al-Ameer" (type string) at path "user" because of "BSONError" 
 2023-06-05		10:19:57	febe3bc7-701f-4124-9c08-5dfa632a0a5d	 ValidationError: Notes validation failed: user: Cast to ObjectId failed for value "ustadh01" (type string) at path "user" because of "BSONError" 
+2023-06-06		14:19:52	6b6934b6-413a-4602-b339-eb10c04a67e6	 MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gobtco6-shard-00-00.xvtqaku.mongodb.net 

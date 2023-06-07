@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const { logger } = require("./middleware/logger");
+const { logger, logEvents } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 const corsOptions = require("./config/corsOptions");
 const connectDB = require("./config/dbConn");
@@ -30,8 +30,8 @@ app.use(cors(corsOptions));
 app.use(express.static("public"));
 
 app.use("/", require("./routes/root"));
-app.use("/user", require("./routes/userRoute"));
-app.use("/note", require("./routes/NoteRoute"));
+app.use("/users", require("./routes/userRoute"));
+app.use("/notes", require("./routes/NoteRoute"));
 
 // error page routes/ catch all routes
 app.all("*", (req, res) => {

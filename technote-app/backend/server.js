@@ -30,6 +30,7 @@ app.use(cors(corsOptions));
 app.use(express.static("public"));
 
 app.use("/", require("./routes/root"));
+app.use("/auth", require("./routes/authRoute.js"));
 app.use("/users", require("./routes/userRoute"));
 app.use("/notes", require("./routes/NoteRoute"));
 

@@ -199,3 +199,13 @@
 2023-06-09		12:13:22	88d89237-254f-4ab4-a59a-b38e3f6f8bfc	 POST	http://localhost:5173	/auth 
 2023-06-09		12:13:23	4532ebab-f7c1-4b05-bf2d-19364ea7a01b	 GET	http://localhost:5173	/users 
 2023-06-09		12:13:23	aa4c31a3-ea58-4341-b0f8-137d476cea57	 GET	http://localhost:5173	/notes 
+2023-06-11		21:04:56	785b131f-0e28-45be-ac08-b62bf85a2525	 OPTIONS	http://localhost:5173	/auth 
+2023-06-11		21:04:56	9546d1eb-3708-41e6-b83c-7492d015f35e	 POST	http://localhost:5173	/auth 
+2023-06-11		21:04:57	fb8b7742-e49d-428c-9a4d-bbcb5e850d54	 GET	http://localhost:5173	/users 
+2023-06-11		21:04:57	157fe9a3-40ee-4432-84b8-e1657394fec5	 GET	http://localhost:5173	/notes 
+2023-06-11		21:15:37	5b267f38-74f1-430b-ae3a-8c165227f85a	 GET	http://localhost:5173	/notes 
+2023-06-11		21:15:37	3d5d9103-d415-4dda-a89b-71e9dd988413	 GET	http://localhost:5173	/users 
+2023-06-11		21:16:18	3a664343-08d4-48ae-954f-f4d57e9a26b1	 GET	http://localhost:5173	/notes 
+2023-06-11		21:16:18	5c1d5510-478f-4065-9b40-f45366092bd3	 GET	http://localhost:5173	/users 
+2023-06-11		21:22:34	719cc794-031c-4146-bf86-f822a049a39f	 GET	http://localhost:5173	/notes 
+2023-06-11		21:22:34	b7376632-8b6b-436a-aaa6-18541fbaa939	 GET	http://localhost:5173	/users 

@@ -125,6 +125,8 @@ const NewUserForm = () => {
         >
           {options}
         </select>
+
+        {/* <button className="form__submit-button" disabled={!canSave}>Save</button> */}
       </form>
     </>
   );

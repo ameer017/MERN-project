@@ -33,6 +33,11 @@
   margin-bottom: 0.5em;
 }
 
+.errmsg a:any-link {
+  color: var(--ERROR);
+  text-decoration: underline;
+}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -291,8 +296,8 @@ tr {
 
 
 .form__checkbox {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .form__select {

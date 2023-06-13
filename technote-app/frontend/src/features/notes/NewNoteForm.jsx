@@ -39,17 +39,6 @@ const NewNoteForm = (note, users) => {
     }
   };
 
-
-
-
-  const created = new Date(note.createdAt).toLocaleString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  });
   
   const options = Array.isArray(users) ? (
     users.map((user) => (
@@ -78,6 +67,7 @@ const NewNoteForm = (note, users) => {
             disabled={!canSave}
           >
             <FontAwesomeIcon icon={faSave} />
+            
           </button>
         
         </div>
@@ -99,7 +89,7 @@ const NewNoteForm = (note, users) => {
         Text:
       </label>
       <textarea
-        className={`form_input form_input--text ${validTextClass}`}
+        className={`form__input form__input--text ${validTextClass}`}
         id="note-text"
         name="text"
         value={text || ''}
@@ -108,7 +98,7 @@ const NewNoteForm = (note, users) => {
       <div className="form__row">
         <div className="form__divider">
           <label
-            className="form_label form_checkbox-container"
+            className="form__label form_checkbox-container"
             htmlFor="note-completed"
           >
             WORK COMPLETE:
@@ -123,7 +113,7 @@ const NewNoteForm = (note, users) => {
           </label>
 
           <label
-            className="form_label form_checkbox-container"
+            className="form__label form__checkbox-container"
             htmlFor="note-username"
           >
             ASSIGNED TO:
@@ -137,14 +127,6 @@ const NewNoteForm = (note, users) => {
           >
             {options}
           </select>
-        </div>
-        <div className="form__divider">
-          <p className="form__created">
-            Created:
-            <br />
-            {created}
-          </p>
-         
         </div>
       </div>
     </form>

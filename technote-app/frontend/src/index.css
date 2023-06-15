@@ -56,6 +56,9 @@
 .icon-button:hover,
 .icon-button:focus-visible {
   transform: scale(1.2);
+  transition-duration: 800ms;
+  color: #b3be6b;
+  cursor: pointer;
 }
 
 .icon-button[disabled] {

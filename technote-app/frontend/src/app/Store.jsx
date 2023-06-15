@@ -10,7 +10,7 @@ export const store = configureStore({
         auth: authReducer
     },
     middleware: (getDefaultMiddleware) =>
-     getDefaultMiddleware().concat(ApiSlice.middleware), devTools: true
+     getDefaultMiddleware().concat(ApiSlice.middleware), devTools: false
 })
 
 setupListeners(store.dispatch)
